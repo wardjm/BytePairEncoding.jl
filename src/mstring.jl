@@ -95,11 +95,12 @@ function write_merges(io::IO, rank, endsym = nothing; limit = typemax(Int), comm
 end
 
 function Base.hash(m::Merge, h::UInt)
-    h = hash(m.byte, hash(m.extra, h)) + Base.memhash_seed
-    str_size = m.ncodeunits * sizeof(UInt8)
-    str = m.string
-    ptr = convert(Ptr{UInt8}, pointer(str)) + m.offset
-    return GC.@preserve str ccall(Base.memhash, UInt, (Ptr{UInt8}, Csize_t, UInt32), ptr, str_size, h % UInt32) + h
+    h = hash(m.byte, hash(m.extra, h))
+    offset = Int(m.offset)
+    for i in 1:Int(m.ncodeunits)
+        h = hash(codeunit(m.string, offset + i), h)
+    end
+    return h
 end
 
 function Base.:(==)(m1::Merge, m2::Merge)

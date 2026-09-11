@@ -14,10 +14,14 @@ StructWalk = "31cdf514-beb7-4750-89db-dda9d2eb8d3d"
 TextEncodeBase = "f92c20c0-9f2a-4705-8116-881385faba05"
 Unicode = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
+[sources]
+TextEncodeBase = {rev = "master", url = "https://github.com/wardjm/TextEncodeBase.jl"}
+
+
 [compat]
 DataStructures = "0.18"
 DoubleArrayTries = "0.1.1"
 LRUCache = "1.6"
 StructWalk = "0.2"
 TextEncodeBase = "0.8.3"
-julia = "1.6"
+julia = "1.11"
