@@ -19,7 +19,7 @@ TextEncodeBase = {rev = "main", url = "https://github.com/wardjm/TextEncodeBase.
 
 
 [compat]
-DataStructures = "0.18"
+DataStructures = "0.18, 0.19"
 DoubleArrayTries = "0.1.1"
 LRUCache = "1.6"
 StructWalk = "0.2"
