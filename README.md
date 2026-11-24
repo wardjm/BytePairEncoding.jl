@@ -1,5 +1,29 @@
 # BytePairEncoding.jl
 
+<!-- wardjm-fork-note -->
+> [!NOTE]
+> **This is a maintained fork of [chengchingwen/BytePairEncoding.jl](https://github.com/chengchingwen/BytePairEncoding.jl).** The upstream package is no longer
+> actively updated, so I'm keeping this fork working with current Julia and current versions of its
+> dependencies (Julia 1.11+ and the updated TextEncodeBase). The fork keeps the original package name and UUID but is not
+> registered in General, so install it by URL:
+>
+> ```julia
+> using Pkg
+> Pkg.add([
+>     PackageSpec(url = "https://github.com/wardjm/PrimitiveOneHot.jl"),
+>     PackageSpec(url = "https://github.com/JuliaText/WordTokenizers.jl"),
+>     PackageSpec(url = "https://github.com/wardjm/TextEncodeBase.jl"),
+>     PackageSpec(url = "https://github.com/wardjm/BytePairEncoding.jl"),
+> ])
+> ```
+>
+> The other packages in that list are forks this one depends on (PrimitiveOneHot, TextEncodeBase), plus the unreleased
+> WordTokenizers 1.0 from upstream master. On Julia 1.13+ Pkg follows this repo's `[sources]`, so
+> `Pkg.add(url = "https://github.com/wardjm/BytePairEncoding.jl")` alone is enough there.
+>
+> Issues and pull requests are welcome on this fork.
+
+
 [![Build status](https://github.com/chengchingwen/BytePairEncoding.jl/workflows/CI/badge.svg)](https://github.com/chengchingwen/BytePairEncoding.jl/actions)
 [![codecov](https://codecov.io/gh/chengchingwen/BytePairEncoding.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/chengchingwen/BytePairEncoding.jl)
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://chengchingwen.github.io/BytePairEncoding.jl/dev/)
